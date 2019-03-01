@@ -125,7 +125,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQx-Wu-X1k" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQx-Wu-X1k" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="9" y="651" width="396" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4140625" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -152,6 +152,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="JNq-JQ-k6w" eventType="touchUpInside" id="CMn-Mz-zqh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IZ-Cu-xoh" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="396" height="52"/>
@@ -163,6 +166,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomansTapped:" destination="JNq-JQ-k6w" eventType="touchUpInside" id="336-kj-icl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXy-1A-9c1" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="144" width="396" height="52"/>
@@ -174,6 +180,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="JNq-JQ-k6w" eventType="touchUpInside" id="rJL-0m-vFY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -210,6 +219,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="kQx-Wu-X1k" id="zw7-Vx-icv"/>
                         <segue destination="Oa1-8i-DbU" kind="show" identifier="skillVCSegue" id="VTS-QV-Dg9"/>
                     </connections>
                 </viewController>
@@ -234,6 +244,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-LP-kKB" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                                <rect key="frame" x="9" y="651" width="396" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4140625" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="L1x-ZV-oqi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="rG5-Ll-xre">
                                 <rect key="frame" x="20" y="40" width="374" height="111"/>
                                 <subviews>
@@ -278,16 +299,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-LP-kKB" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="9" y="651" width="396" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4140625" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X2-dP-5FU">
+                                <rect key="frame" x="9" y="10" width="64" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="L1x-ZV-oqi"/>
+                                    <constraint firstAttribute="height" constant="69" id="5pN-Di-qiP"/>
+                                    <constraint firstAttribute="width" constant="64" id="NnW-Kv-den"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Finish">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="cuG-K1-nog" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="PwR-O9-oCf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -297,14 +319,17 @@
                             <constraint firstItem="ywg-LP-kKB" firstAttribute="leading" secondItem="og9-y2-X7U" secondAttribute="leading" constant="9" id="Fu1-GM-Bo6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PyQ-kP-aTJ" secondAttribute="trailing" id="IHR-Zu-iVD"/>
                             <constraint firstItem="PyQ-kP-aTJ" firstAttribute="top" secondItem="rG5-Ll-xre" secondAttribute="bottom" constant="50" id="LrE-rQ-mrJ"/>
+                            <constraint firstItem="3X2-dP-5FU" firstAttribute="leading" secondItem="og9-y2-X7U" secondAttribute="leading" constant="9" id="NTZ-qz-tdc"/>
                             <constraint firstItem="e85-Mn-jyN" firstAttribute="top" secondItem="ywg-LP-kKB" secondAttribute="bottom" constant="35" id="Qca-X6-tuv"/>
                             <constraint firstAttribute="trailing" secondItem="ywg-LP-kKB" secondAttribute="trailing" constant="9" id="YF6-Nf-50v"/>
                             <constraint firstItem="PyQ-kP-aTJ" firstAttribute="leading" secondItem="og9-y2-X7U" secondAttribute="leadingMargin" id="e3u-0j-4Nc"/>
+                            <constraint firstItem="3X2-dP-5FU" firstAttribute="top" secondItem="og9-y2-X7U" secondAttribute="top" constant="10" id="ipB-sa-P8z"/>
                             <constraint firstItem="rG5-Ll-xre" firstAttribute="leading" secondItem="og9-y2-X7U" secondAttribute="leadingMargin" id="oMM-t7-1ex"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hr-rc-mtq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cuG-K1-nog" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1594.2028985507247" y="24.456521739130437"/>
         </scene>
